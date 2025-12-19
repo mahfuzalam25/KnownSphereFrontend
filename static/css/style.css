@@ -99,7 +99,7 @@ p {
 .btn {
     background: var(--button);
     color: #fff;
-    width: fit-content;
+    /* width: fit-content; */
     height: 35px;
     border-radius: 25px;
     font-size: 15px;
@@ -110,6 +110,22 @@ p {
 }
 
 .btn:hover {
+    background: var(--button_hover);
+    color: #fff;
+    box-shadow: #ff5831 0px 0px 10px 0px;
+}
+
+.profilebtn img {
+    transition: 0.3s;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    
+}
+
+.profilebtn img:hover {
     background: var(--button_hover);
     color: #fff;
     box-shadow: #ff5831 0px 0px 10px 0px;
@@ -332,14 +348,17 @@ p {
     height: fit-content;
     flex-basis: 25%;
 }
-.articleCard .category{
+
+.articleCard .category {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-.articleCard .category .marginright{
+
+.articleCard .category .marginright {
     margin-right: 73px;
 }
+
 .articleCard .category span {
     background: rgb(255, 88, 49);
     padding: 5px 10px;
@@ -355,6 +374,7 @@ p {
     line-height: 1.4;
     margin-top: 10px;
 }
+
 .articleCard p {
     font-size: 8px;
     line-height: 8px;
@@ -365,12 +385,13 @@ p {
     text-align: center;
 }
 
-.articleCard .author h4{
+.articleCard .author h4 {
     font-size: 10px;
     font-weight: 600;
     margin-bottom: 5px;
 }
-.articleCard .author .university{
+
+.articleCard .author .university {
     font-size: 8px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -380,10 +401,12 @@ p {
     border: 1px solid rgb(255, 88, 49);
     border-radius: 25px;
 }
-.articleCard .author{
+
+.articleCard .author {
     margin-right: 50px;
 }
-.articleCard .counts{
+
+.articleCard .counts {
     display: block;
     background: rgba(255, 255, 255, 0.1);
     width: fit-content;
@@ -391,11 +414,309 @@ p {
     border-radius: 25px;
     padding: 5px 10px;
     margin-top: 10px;
-    
+
 }
-.articleCard .counts span{
+
+.articleCard .counts span {
     font-size: 10px;
     margin: 0 2px;
 }
 
 /* Latest section end */
+
+/* Why us start */
+#why .borderstyle {
+    height: 835px;
+}
+
+.feature {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.feature .featureCard {
+    background: var(--bg);
+    border: 1px solid rgb(255, 88, 49);
+    box-shadow: #ff5831 0px 0px 10px 0px;
+    border-radius: 25px;
+    padding: 18px;
+    height: fit-content;
+    margin: 10px 10px;
+    flex-basis: 30%;
+    padding: 40px 25px;
+    align-content: center;
+}
+
+.featureCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.featureCard .icon {
+    background: #e3f2fd;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.icon span {
+    font-size: 1.8rem;
+}
+
+/* Why us end */
+
+
+/* Call to action start */
+.calltoaction {
+    position: relative;
+    background: var(--black);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.circleGrad {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(78, 204, 163, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.calltoaction h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.calltoaction h2 span {
+    color: #4ecca3;
+    font-style: italic;
+}
+
+.calltoaction .btnbottom {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #64748b;
+}
+
+/* Call to action end */
+
+/* Footer section start */
+.footersection {
+    background: var(--black);
+    color: #cbd5e1;
+    border-top: 1px solid #1e293b;
+    padding-top: 80px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.footer .footerCard {
+    flex-basis: 23%;
+    margin: 10px;
+}
+
+.footerCard h4 {
+    margin-bottom: 20px;
+}
+
+.footerCard p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #94a3b8;
+    margin: 30px 0 20px 0;
+}
+
+.social {
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footerItem {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerlink:hover {
+    color: var(--button);
+    padding-left: 5px;
+}
+
+.footerItem a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footerform {
+    display: flex;
+    gap: 10px;
+}
+
+.footerform input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: white;
+    width: 70%;
+}
+
+.formAbtn {
+    padding: 10px 15px;
+    background: var(--button);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.formAbtn:hover {
+    background: var(--bg);
+    color: #cbd5e1;
+    box-shadow: #ff5831 0px 0px 10px 0px;
+}
+.copyrights{
+    border-top: 1px solid #334155;
+    text-align: center;
+    align-content: center;
+    height: 80px;
+}
+
+/* Footer section end */
+
+/* Login page start */
+.form_container {
+    background: var(--black);
+    border-radius: 25px;
+    width: 80%;
+    align-content: center;
+    margin-left: 125px;
+}
+.loginSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.loginForm h2{
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.loginForm .forgot{
+    color: var(--main-color);
+    font-size: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.loginForm .forgot:hover{
+    color: var(--button);
+    padding-left: 5px;
+}
+.loginForm{
+    flex-basis: 45%;
+    text-align: center;
+    align-content: center;
+    margin: 0 5px 0 20px;
+}
+.loginbackimage{
+    flex-basis: 50%;
+    margin-left: 32px;
+    width: 100%;
+    align-items: center;
+}
+.loginbackimage img{
+    width: 100%;
+    height: fit-content;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.loginformstyle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.loginForm form input[type="text"]{
+    background: var(--bg);
+    color: #fff;
+    width: 50%;
+    height: 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 10px;
+}
+.loginForm form input[type="email"]{
+    background: var(--bg);
+    color: #fff;
+    width: 50%;
+    height: 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 10px;
+}
+.loginForm form input[type="password"]{
+    background: var(--bg);
+    color: #fff;
+    width: 50%;
+    height: 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 10px;
+}
+.loginForm form input::placeholder{
+    color: #fff;
+}
+.loginForm form input[type=submit]{
+    background: var(--button);
+    color: #fff;
+    width: 50%;
+    height: 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.loginForm form input[type=submit]:hover{
+    background: var(--bg);
+    color: #cbd5e1;
+    box-shadow: #ff5831 0px 0px 10px 0px;
+}
+/* Login page end */
